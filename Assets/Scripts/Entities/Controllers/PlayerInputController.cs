@@ -2,9 +2,21 @@
 using UnityEngine.InputSystem;
 
 public class PlayerInputController : CharacterController {
-    // Player Input 컴포넌트에서 이동키 입력시 호출되는 함수.
+    private Camera mainCamera;
+
+    private void Start () {
+        mainCamera = Camera.main;
+    }
+
     public void OnIcMove (InputValue value) {
         Vector2 moveDir = value.Get<Vector2>().normalized;
         CallMoveEvent(moveDir);
+    }
+
+    public void OnIcLook (InputValue value) {
+        Vector2 mousePos = value.Get<Vector2>();
+        mousePos = mainCamera.ScreenToWorldPoint(mousePos);
+        Vector2 lookDir = (mousePos - (Vector2)transform.position).normalized;
+        CallLookEvent(lookDir);
     }
 }

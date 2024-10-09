@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "IcLook",
+                    "type": "Value",
+                    "id": "c20f1dd7-64b0-471d-bd11-899e6059cc20",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -70,6 +79,17 @@
                     "action": "IcMove",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "f0d65f68-19fa-437e-abaf-3364d7e207ab",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "IcLook",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

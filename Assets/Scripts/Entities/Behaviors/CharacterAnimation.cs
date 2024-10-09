@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class CharacterAnimationController : MonoBehaviour {
+public class CharacterAnimation : MonoBehaviour {
     private static readonly int isWalking = Animator.StringToHash("isWalking");
     
     private Animator animator;
