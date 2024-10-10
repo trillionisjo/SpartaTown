@@ -5,6 +5,7 @@ public class CharacterMovement : MonoBehaviour {
     private Rigidbody2D rigidbody2d;
     private Collider2D collider2d;
     private CharacterController controller;
+    private CharacterStatHandler stats;
 
     private Vector2 movementDirection = Vector2.zero;
 
@@ -12,6 +13,7 @@ public class CharacterMovement : MonoBehaviour {
         rigidbody2d = GetComponent<Rigidbody2D>();
         collider2d = GetComponent<Collider2D>();
         controller = GetComponent<CharacterController>();
+        stats = GetComponent<CharacterStatHandler>();
     }
 
     private void Start () {
@@ -23,6 +25,6 @@ public class CharacterMovement : MonoBehaviour {
     }
 
     private void OnMoveEvent (Vector2 direction) {
-        movementDirection = direction * 5f;
+        movementDirection = direction * stats.CurrentStat.moveSpeed;
     }
 }
