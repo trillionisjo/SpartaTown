@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class EnterGameScene : MonoBehaviour {
+public class GameStartButton : MonoBehaviour {
     [SerializeField] private Text playerNameText;
 
     public void Enter () {
