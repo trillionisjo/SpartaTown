@@ -8,8 +8,17 @@ public class EventTriggerDetector : MonoBehaviour {
             return;
         }
 
-        var playerObj = collision.gameObject.GetComponent<EventTriggerArea>().GetPlayerObject();
-        Debug.Log(playerObj);
+        var trigger = collision.gameObject.GetComponent<EventTrigger>();
+        trigger.StartEvent();
+    }
+
+    private void OnTriggerExit2D (Collider2D collision) {
+        if (!IsLayerMatched(eventLayer, collision.gameObject.layer)) {
+            return;
+        }
+
+        var trigger = collision.gameObject.GetComponent<EventTrigger>();
+        trigger.ExitEvent();
     }
 
     private bool IsLayerMatched (int mask, int target) {

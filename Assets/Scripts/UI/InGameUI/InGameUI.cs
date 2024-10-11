@@ -14,6 +14,8 @@ public class InGameUI : MonoBehaviour {
     [SerializeField] private GameObject nameChangePanel;
     [SerializeField] private GameObject charChangePanel;
     [SerializeField] private GameObject attenderListPanel;
+    [SerializeField] private GameObject ringTheBellBox;
+    [SerializeField] private DialogBox dialogBox;
 
     [SerializeField] private Button nameChangeBtn;
     [SerializeField] private Button charChangeBtn;
@@ -47,4 +49,19 @@ public class InGameUI : MonoBehaviour {
         NameChangePannelOpened?.Invoke(active);
     }
 
+    public void ShowRingTheBellBox (string contentText, DialogId id) {
+        var box = ringTheBellBox.GetComponent<RingTheBellBox>();
+        box.Init(contentText, id);
+        ringTheBellBox?.SetActive(true);
+    }
+
+    public void HideRingTheBellBox () {
+        if (ringTheBellBox == true) {
+            ringTheBellBox.SetActive(false);
+        }
+    }
+
+    public void StartDialog (string[] texts) {
+        dialogBox.StartDialog(texts);
+    }
 }
