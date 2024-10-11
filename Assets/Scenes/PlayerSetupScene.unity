@@ -720,9 +720,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 164782418}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CharacterSelectionWindowButton, Assembly-CSharp
-        m_MethodName: Open
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -731,57 +731,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
---- !u!1 &245369844
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 245369845}
-  - component: {fileID: 245369846}
-  m_Layer: 0
-  m_Name: DataManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &245369845
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245369844}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1549657681}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &245369846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245369844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68fffa6ac0127a84eaee57010cc3fb63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CharacterInfoList:
-  - {fileID: 11400000, guid: 45306458ce1c6924e83caf33faa2840e, type: 2}
-  - {fileID: 11400000, guid: aac04d63fd60a8648bbecc84d12d479f, type: 2}
-  - {fileID: 11400000, guid: 362191a5049c64f4181a45aa61310807, type: 2}
-  PlayerName: {fileID: 11400000, guid: 9974dd61e97be114494da029c93d8c91, type: 2}
-  SelectedCharacter: {fileID: 11400000, guid: 45306458ce1c6924e83caf33faa2840e, type: 2}
+        m_CallState: 0
 --- !u!1 &321677166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,8 +1247,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1262864013}
-        m_TargetAssemblyTypeName: EnterGameScene, Assembly-CSharp
-        m_MethodName: Enter
+        m_TargetAssemblyTypeName: GameStartButton, Assembly-CSharp
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1516,6 +1466,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1549657681}
   - component: {fileID: 1549657680}
+  - component: {fileID: 1549657683}
+  - component: {fileID: 1549657682}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -1547,10 +1499,39 @@ Transform:
   m_LocalPosition: {x: 1434.1316, y: 574.03394, z: 9.548632}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 245369845}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1549657682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549657679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ee42ba89eb4554da6288938c50db03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: {fileID: 11400000, guid: 9974dd61e97be114494da029c93d8c91, type: 2}
+  playerCharacter: {fileID: 11400000, guid: 45306458ce1c6924e83caf33faa2840e, type: 2}
+--- !u!114 &1549657683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549657679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68fffa6ac0127a84eaee57010cc3fb63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterInfoList:
+  - {fileID: 11400000, guid: 45306458ce1c6924e83caf33faa2840e, type: 2}
+  - {fileID: 11400000, guid: 362191a5049c64f4181a45aa61310807, type: 2}
+  - {fileID: 11400000, guid: aac04d63fd60a8648bbecc84d12d479f, type: 2}
 --- !u!1 &1727655451
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,16 +1,9 @@
 using UnityEngine;
 
 public class CharacterStatHandler : MonoBehaviour {
-    [SerializeField] CharacterStat baseStat;
-    public CharacterStat CurrentStat { get; set; }
+    [SerializeField] private CharacterAbility ability;
 
-    private void Awake () {
-        UpdateCharacterStat();
+    public CharacterAbility GetAbility() {
+        return ability;
     }
-
-    private void UpdateCharacterStat () {
-        CurrentStat = new CharacterStat();
-        CurrentStat.moveSpeed = baseStat.moveSpeed;
-    }
-
 }

@@ -4,11 +4,11 @@ using UnityEngine;
 public class CharacterNameplate : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI characterName;
 
-    private void Start () {
-        UpdateName();
+    public void SetName (string name) {
+        characterName.text = name;
     }
 
-    private void UpdateName () {
-        characterName.text = DataManager.Instance.PlayerName.value;
+    public string GetName () {
+        return characterName.text;
     }
 }

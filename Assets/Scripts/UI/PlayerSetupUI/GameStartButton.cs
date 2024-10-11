@@ -5,8 +5,8 @@ using UnityEngine.UI;
 public class GameStartButton : MonoBehaviour {
     [SerializeField] private Text playerNameText;
 
-    public void Enter () {
-        DataManager.Instance.PlayerName.value = playerNameText.text;
+    public void StartGame () {
+        PlayerData.GetInstance().ChangePlayerName(playerNameText.text);
         SceneManager.LoadScene("GameScene");
     }
 }

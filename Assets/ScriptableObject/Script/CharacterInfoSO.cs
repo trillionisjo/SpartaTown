@@ -7,8 +7,8 @@ public enum CharacterType {
 }
 
 [CreateAssetMenu(fileName = "CharacterInfoSO", menuName = "SO/CharacterInfo")]
-public class CharacterInfo : ScriptableObject {
-    public CharacterType CharacterType;
-    public Sprite CharacterImage;
-    public RuntimeAnimatorController CharacterAnimator;
+public class CharacterInfoSO : ScriptableObject {
+    public CharacterType type;
+    public Sprite sprite;
+    public RuntimeAnimatorController rac;
 }
