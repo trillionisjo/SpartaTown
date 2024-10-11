@@ -24,8 +24,8 @@ public class PlayerUpdater : MonoBehaviour {
     }
 
     private void OnDestroy () {
-        playerData.PlayerCharacterChanged += OnCharacterChanged;
-        playerData.PlayerNameChanged += OnPlayerNameChanged;
+        playerData.PlayerCharacterChanged -= OnCharacterChanged;
+        playerData.PlayerNameChanged -= OnPlayerNameChanged;
     }
 
     private void OnCharacterChanged (CharacterInfoSO character) {

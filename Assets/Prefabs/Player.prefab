@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 32499fd0ff0dd0f47b3c07e0fc8dce0d, type: 2}
+  m_sharedMaterial: {fileID: -522707421456041496, guid: 32499fd0ff0dd0f47b3c07e0fc8dce0d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 4594280089824017620}
   - component: {fileID: -1049707251508955335}
   - component: {fileID: -4479521927791402695}
+  - component: {fileID: 7097905835702028271}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -205,7 +206,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5446491130639196300
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -390,6 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39aadfff761ce024aa1e1bc52f9139cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputActionsAsset: {fileID: 0}
 --- !u!114 &-4479521927791402695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,6 +404,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0976c6ec181d5024892a18a7498b0bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7097905835702028271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3904389706471806540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a21ed07acf208543b5e8920d3a05c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &6536916726823917652
 GameObject:
   m_ObjectHideFlags: 0
