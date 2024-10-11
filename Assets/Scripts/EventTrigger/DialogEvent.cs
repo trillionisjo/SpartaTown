@@ -12,6 +12,7 @@ public class DialogEvent : EventTrigger {
     }
 
     public override void ExitEvent () {
+        base.ExitEvent();
         InGameUI.GetInstance().HideRingTheBellBox();
     }
 }

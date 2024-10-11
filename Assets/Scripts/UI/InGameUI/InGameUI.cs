@@ -64,4 +64,10 @@ public class InGameUI : MonoBehaviour {
     public void StartDialog (string[] texts) {
         dialogBox.StartDialog(texts);
     }
+
+    public void EndDialog () {
+        if (dialogBox == true) {
+            dialogBox.gameObject.SetActive(false);
+        }
+    }
 }

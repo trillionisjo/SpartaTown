@@ -5,5 +5,6 @@ public class EventTrigger : MonoBehaviour {
     }
 
     public virtual void ExitEvent () {
+        InGameUI.GetInstance().EndDialog();
     }
 }
