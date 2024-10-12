@@ -3,6 +3,10 @@ using UnityEngine;
 public enum DialogId { 
     None = 0,
     YeChanTutor = 1,
+    Penguin = 2,
+    JiWonTutor = 3,
+    AlarmElf = 4,
+    JungHoTutor = 5,
 }
 
 
