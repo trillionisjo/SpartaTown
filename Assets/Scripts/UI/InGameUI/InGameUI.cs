@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,7 @@ public class InGameUI : MonoBehaviour {
     [SerializeField] private GameObject attenderListPanel;
     [SerializeField] private GameObject ringTheBellBox;
     [SerializeField] private DialogBox dialogBox;
+    [SerializeField] private TextMeshProUGUI timeText;
 
     [SerializeField] private Button nameChangeBtn;
     [SerializeField] private Button charChangeBtn;
@@ -29,6 +31,10 @@ public class InGameUI : MonoBehaviour {
         nameChangeBtn.onClick.AddListener(OnNameChangeBtnClick);
         charChangeBtn.onClick.AddListener(OnCharChangeBtnClick);
         attenderListBtn.onClick.AddListener(OnAttenderListBtnClick);
+    }
+
+    private void Update () {
+        timeText.text = DateTime.Now.ToString("HH:mm");
     }
 
     private void OnNameChangeBtnClick () {
